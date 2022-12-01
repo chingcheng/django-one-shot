@@ -20,10 +20,10 @@
                 </tr>
             </thead>
             <tbody>
-                {% for todo in todo_list %}
+                {% for todo in todo_lists %}
                 <tr>
-                    <td>{{ todo.name }}</td>
-                    <td></td>
+                    <td><a href="{% url 'todo_list_detail' todo.id %}">{{ todo.name }}</a></td>
+                    <td>{{ todo.items.all|length }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
