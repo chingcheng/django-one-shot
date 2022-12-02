@@ -8,3 +8,14 @@ class TodoListForm(ModelForm):
         fields = [
             "name",
         ]
+
+
+class TodoItemForm(ModelForm):
+    class Meta:
+        model = TodoItem
+        fields = [
+            "task",
+            "due_date",
+            "is_completed",
+            "list",
+        ]
